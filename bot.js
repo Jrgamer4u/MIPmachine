@@ -1,4 +1,4 @@
-
+const keepAlive = require("./server.js")
                 let Discord;
                 let Database;
                 if(typeof window !== "undefined"){
@@ -61,6 +61,8 @@ function colourBlend(c1, c2, ratio) {
 
 
 s4d.client.login(process.env['TOKEN']).catch((e) => { s4d.tokenInvalid = true; s4d.tokenError = e; });
+
+keepAlive()
 
 s4d.client.on('message', async (s4dmessage) => {
   if ((s4dmessage.content) == 'hi') {
