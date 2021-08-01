@@ -59,10 +59,25 @@ function colourBlend(c1, c2, ratio) {
   return '#' + r + g + b;
 }
 
+function mathRandomInt(a, b) {
+  if (a > b) {
+    // Swap a and b to ensure a is smaller.
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+
 
 s4d.client.login(process.env['TOKEN']).catch((e) => { s4d.tokenInvalid = true; s4d.tokenError = e; });
 
 keepAlive()
+
+s4d.client.on('ready', async () => {
+  s4d.client.channels.cache.find((channel) => channel.name === 'general').send(String('connected'));
+
+});
 
 s4d.client.on('message', async (s4dmessage) => {
   if ((s4dmessage.content) == 'hi') {
@@ -84,9 +99,34 @@ s4d.client.on('message', async (s4dmessage) => {
        s4dmessage.channel.send(String('hmm.'));
 
      s4d.reply = null; }).catch(async (e) => { console.error(e);   s4dmessage.channel.send(String('https://cdn.discordapp.com/attachments/870522417079017474/870760305179910155/Cake_BFN_asset.png'));
-     });}
+     });} else if ((s4dmessage.content) == 'Click') {
+    s4d.database.add(String((String(s4dmessage.member) + ' Clicks')), parseInt(1));
+    s4d.database.add(String('Total Clicks'), parseInt(1));
+    s4dmessage.channel.send(String(([s4dmessage.member,' Gained ',' 1 ',' Click '].join(''))));
+  } else if ((s4dmessage.content) == 'My clicks') {
+    s4dmessage.channel.send(s4d.database.get(String((String(s4dmessage.member) + ' Clicks'))));
+  } else if ((s4dmessage.content) == 'Total clicks') {
+    s4dmessage.channel.send(s4d.database.get(String('Total Clicks')));
+  } else if ((s4dmessage.content) == 'Version') {
+    s4dmessage.channel.send(String('Version 1.1.0'));
+  } else if (String((s4dmessage.content)).includes(String('sus'))) {
+    s4dmessage.channel.send(String('among us'));
+  } else if ((s4dmessage.content) == 'What\'s the Date?') {
+    s4dmessage.channel.send(String(((new Date().getDate()))));
+  } else if ((s4dmessage.content) == 'Click Soft Risk') {
+    s4d.database.set(String((String(s4dmessage.member) + ' Soft Risk')), (mathRandomInt(-10, 10)));
+    s4d.database.add(String((String(s4dmessage.member) + ' Clicks')), parseInt(s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk')))));
+    s4d.database.add(String('Total Clicks'), parseInt(s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk')))));
+    s4dmessage.channel.send(String(([s4dmessage.member,' Gained ',s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk'))),' Clicks '].join(''))));
+  } else if ((s4dmessage.content) == 'Click Hard Risk') {
+    s4d.database.set(String((String(s4dmessage.member) + ' Hard Risk')), (mathRandomInt(-100, 100)));
+    s4d.database.add(String((String(s4dmessage.member) + ' Clicks')), parseInt(s4d.database.get(String((String(s4dmessage.member) + 'Hard Risk')))));
+    s4d.database.add(String('Total Clicks'), parseInt(s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk')))));
+    s4dmessage.channel.send(String(([s4dmessage.member,' Gained ',s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk'))),' Clicks '].join(''))));
+  }
   if ((s4dmessage.content) == 'Help, OBR!') {
-    s4dmessage.channel.send(String((['Command List','\n','Commands created in 7/30/2021','\n','Help, OBR!','\n',(s4dmessage.member || await s4dmessage.guild.members.fetch(s4dmessage.author.id)).nickname,'\n','pi','\n','I\'m not racist but','\n','color','\n','among us','\n','OBR'].join(''))));
+    s4dmessage.channel.send(String((['Command List','\n','Commands created in 7/30/2021','\n','hi','\n','Help, OBR!','\n',(s4dmessage.member || await s4dmessage.guild.members.fetch(s4dmessage.author.id)).nickname,'\n','pi','\n','I\'m not racist but','\n','color','\n','among us','\n','OBR'].join(''))));
+    s4dmessage.channel.send(String((['Command List','\n','Commands created in 7/31/2021','\n','Click','\n','My clicks','\n','Total clicks','\n','sus','\n','Version','\n','What\'s the Date?','\n','Click Soft Risk','\n','Click Hard Risk'].join(''))));
   }
 
 });
