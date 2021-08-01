@@ -92,7 +92,7 @@ s4d.client.on('message', async (s4dmessage) => {
   } else if ((s4dmessage.content) == 'color') {
     s4dmessage.channel.send(String((String(colourRandom()) + String(colourBlend(colourRandom(), colourRandom(), Math.random())))));
   } else if (String((s4dmessage.content)).includes(String('among us'))) {
-    s4dmessage.channel.send(String('sus'));
+    s4dmessage.channel.send(String('s u s'));
   } else if ((s4dmessage.content) == 'OBR') {
     (s4dmessage.channel).send(String('outlier'));
     (s4dmessage.channel).awaitMessages((m) => m.author.id === (s4dmessage.member).id, { time: (0.166*60*1000), max: 1 }).then(async (collected) => { s4d.reply = collected.first().content;
@@ -110,7 +110,7 @@ s4d.client.on('message', async (s4dmessage) => {
   } else if ((s4dmessage.content) == 'Version') {
     s4dmessage.channel.send(String('Version 1.1.0'));
   } else if (String((s4dmessage.content)).includes(String('sus'))) {
-    s4dmessage.channel.send(String('among us'));
+    s4dmessage.channel.send(String('a m o n g u s'));
   } else if ((s4dmessage.content) == 'What\'s the Date?') {
     s4dmessage.channel.send(String(((new Date().getDate()))));
   } else if ((s4dmessage.content) == 'Click Soft Risk') {
