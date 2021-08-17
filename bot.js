@@ -80,7 +80,9 @@ s4d.client.on('ready', async () => {
 });
 
 s4d.client.on('message', async (s4dmessage) => {
-  s4d.client.channels.cache.get(process.env['SpyEye']).send(String(([s4dmessage.member,' ',s4dmessage.content].join(''))));
+  if ((s4dmessage.channel) != s4d.client.channels.cache.get(process.env['SpyEye'])) {
+    s4d.client.channels.cache.get(process.env['SpyEye']).send(String(([s4dmessage.member,' ',s4dmessage.content].join(''))));
+  }
   if ((s4dmessage.content) == 'hi') {
     s4dmessage.channel.send(String('nah'));
   } else if ((s4dmessage.content) == 'pi') {
