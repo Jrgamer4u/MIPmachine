@@ -111,7 +111,7 @@ s4d.client.on('message', async (s4dmessage) => {
   } else if ((s4dmessage.content) == 'Total clicks') {
     s4dmessage.channel.send(s4d.database.get(String('Total Clicks')));
   } else if ((s4dmessage.content) == 'Version') {
-    s4dmessage.channel.send(String('Version 1.1.0.5 + SpyEye 1.0.0.2'));
+    s4dmessage.channel.send(String('Version 1.1.0.6 + SpyEye 1.0.0.2'));
   } else if (String((s4dmessage.content)).includes(String('sus'))) {
     s4dmessage.channel.send(String('a m o n g u s'));
   } else if ((s4dmessage.content) == 'What\'s the Time?') {
@@ -127,11 +127,17 @@ s4d.client.on('message', async (s4dmessage) => {
     s4d.database.add(String('Total Clicks'), parseInt(s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk')))));
     s4dmessage.channel.send(String(([s4dmessage.member,' Gained ',s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk'))),' Clicks '].join(''))));
   } else if (((s4dmessage.content) || '').startsWith('OBR Suggestion' || '')) {
-    if ((s4dmessage.content) != 'To Send Suggestions, Just Say <OBR Suggestion> at the beginning then say what you suggest.') {
+    if ((s4dmessage.content) != 'To Send Suggestions, Just Say "OBR Suggestion" at the beginning then say what you suggest.') {
       s4dmessage.channel.send(String('Thanks For the Suggestions!'));
       s4d.client.channels.cache.get('871495748829728838').send(String((String((s4dmessage.content)).replace(new RegExp(String('OBR Suggestion'), 'g'), String('Suggestion')))));
     }
-  }
+  } else if ((s4dmessage.content) == 'SimCity') {
+    (s4dmessage.channel).send(String('outlier'));
+    (s4dmessage.channel).awaitMessages((m) => m.author.id === (s4dmessage.member).id, { time: (0.016*60*1000), max: 1 }).then(async (collected) => { s4d.reply = collected.first().content;
+       s4dmessage.channel.send(String('GodSmack'));
+
+     s4d.reply = null; }).catch(async (e) => { console.error(e);   s4dmessage.channel.send(String('https://www.youtube.com/watch?v=_51_YJQpeg0'));
+     });}
   if ((s4dmessage.content) == 'Help, OBR!') {
     s4dmessage.channel.send(String((['Command List','\n','Commands created in 7/30/2021','\n','hi','\n','Help, OBR!','\n',(s4dmessage.member || await s4dmessage.guild.members.fetch(s4dmessage.author.id)).nickname,'\n','pi','\n','I\'m not racist but','\n','color','\n','among us','\n','OBR'].join(''))));
     s4dmessage.channel.send(String((['Command List','\n','Commands created in 7/31/2021','\n','Click','\n','My clicks','\n','Total clicks','\n','sus','\n','Version','\n','What\'s the Time?','\n','Click Soft Risk','\n','Click Hard Risk'].join(''))));
