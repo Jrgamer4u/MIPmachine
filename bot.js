@@ -132,7 +132,7 @@ s4d.client.on('message', async (s4dmessage) => {
       s4d.client.channels.cache.get('871495748829728838').send(String((String((s4dmessage.content)).replace(new RegExp(String('OBR Suggestion'), 'g'), String('Suggestion')))));
     }
   } else if ((s4dmessage.content) == 'SimCity') {
-    (s4dmessage.channel).send(String('outlier'));
+    (s4dmessage.channel).send(String('https://gamepleton.com/wp-content/uploads/2020/08/simcity3000-railways-cbd@2x.png'));
     (s4dmessage.channel).awaitMessages((m) => m.author.id === (s4dmessage.member).id, { time: (0.016*60*1000), max: 1 }).then(async (collected) => { s4d.reply = collected.first().content;
        s4dmessage.channel.send(String('GodSmack'));
 
