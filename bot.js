@@ -103,7 +103,7 @@
     } else if ((s4dmessage.content) == 'Total clicks') {
       s4dmessage.channel.send(s4d.database.get(String('Total Clicks')));
     } else if ((s4dmessage.content) == 'Version') {
-      s4dmessage.channel.send(String('Version 1.1.0.3 + SpyEye 1.0'));
+      s4dmessage.channel.send(String('Version 1.1.0.7 + SpyEye 1.0.0.3'));
     } else if (String((s4dmessage.content)).includes(String('sus'))) {
       s4dmessage.channel.send(String('a m o n g u s'));
     } else if ((s4dmessage.content) == 'What\'s the Time?') {
