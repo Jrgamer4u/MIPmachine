@@ -1,7 +1,7 @@
 (async () => {
   const keepAlive = require("./server.js");
   const Discord = require("discord.js");
-  const Database = require("easy-json-database")
+  const Database = require("easy-json-database");
   const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const s4d = {
@@ -141,7 +141,7 @@
     } else if ((s4dmessage.content) == 'SimCity') {
       (s4dmessage.channel).send(String('outlier'));
       (s4dmessage.channel).awaitMessages((m) => m.author.id === (s4dmessage.member).id, { time: (0.016 * 60 * 1000), max: 1 }).then(async (collected) => {
-      s4d.reply = collected.first().content;
+        s4d.reply = collected.first().content;
         s4dmessage.channel.send(String('GodSmack'));
 
         s4d.reply = null;
