@@ -59,35 +59,41 @@
         s4d.reply = collected.first().content;
         s4dmessage.channel.send(String('hmm.'));
 
-     s4d.reply = null; }).catch(async (e) => { console.error(e);   s4dmessage.channel.send(String('https://cdn.discordapp.com/attachments/870522417079017474/870760305179910155/Cake_BFN_asset.png'));
-     });} else if ((s4dmessage.content) == 'Version') {
-    s4dmessage.channel.send(String('Version 1.3 + SpyEye 1.3'));
-  } else if (String((s4dmessage.content)).includes(String('sus'))) {
-    s4dmessage.channel.send(String('a m o n g u s'));
-  } else if ((s4dmessage.content) == 'What\'s the Time?') {
-    s4dmessage.channel.send(String(([(new Date().getDay()),' / ',(new Date().getDate()),' / ',(new Date().getHours()),' / ',(new Date().getMinutes()),' / ',(new Date().getSeconds())].join(''))));
-  } else if (((s4dmessage.content) || '').startsWith('OBR Suggestion' || '')) {
-    if ((s4dmessage.content) != 'To Send Suggestions, Just Say "OBR Suggestion" at the beginning then say what you suggest.') {
-      s4dmessage.channel.send(String('Thanks For the Suggestions!'));
-      s4d.client.channels.cache.get('871495748829728838').send(String((String((s4dmessage.content)).replace(new RegExp(String('OBR Suggestion'), 'g'), String('Suggestion')))));
+        s4d.reply = null;
+      }).catch(async (e) => {
+        console.error(e); s4dmessage.channel.send(String('https://cdn.discordapp.com/attachments/870522417079017474/870760305179910155/Cake_BFN_asset.png'));
+      });
+    } else if ((s4dmessage.content) == 'Version') {
+      s4dmessage.channel.send(String('Version 1.3 + SpyEye 1.3'));
+    } else if (String((s4dmessage.content)).includes(String('sus'))) {
+      s4dmessage.channel.send(String('a m o n g u s'));
+    } else if ((s4dmessage.content) == 'What\'s the Time?') {
+      s4dmessage.channel.send(String(([(new Date().getDay()), ' / ', (new Date().getDate()), ' / ', (new Date().getHours()), ' / ', (new Date().getMinutes()), ' / ', (new Date().getSeconds())].join(''))));
+    } else if (((s4dmessage.content) || '').startsWith('OBR Suggestion' || '')) {
+      if ((s4dmessage.content) != 'To Send Suggestions, Just Say "OBR Suggestion" at the beginning then say what you suggest.') {
+        s4dmessage.channel.send(String('Thanks For the Suggestions!'));
+        s4d.client.channels.cache.get('871495748829728838').send(String((String((s4dmessage.content)).replace(new RegExp(String('OBR Suggestion'), 'g'), String('Suggestion')))));
+      }
+    } else if ((s4dmessage.content) == 'SimCity') {
+      (s4dmessage.channel).send(String('outlier'));
+      (s4dmessage.channel).awaitMessages((m) => m.author.id === (s4dmessage.member).id, { time: (0.016 * 60 * 1000), max: 1 }).then(async (collected) => {
+        s4d.reply = collected.first().content;
+        s4dmessage.channel.send(String('GodSmack'));
+
+        s4d.reply = null;
+      }).catch(async (e) => {
+        console.error(e); s4dmessage.channel.send(String('https://www.youtube.com/watch?v=_51_YJQpeg0'));
+      });
     }
-  } else if ((s4dmessage.content) == 'SimCity') {
-    (s4dmessage.channel).send(String('outlier'));
-    (s4dmessage.channel).awaitMessages((m) => m.author.id === (s4dmessage.member).id, { time: (0.016*60*1000), max: 1 }).then(async (collected) => { s4d.reply = collected.first().content;
-       s4dmessage.channel.send(String('GodSmack'));
+    if ((s4dmessage.content) == 'Help, OBR!') {
+      s4dmessage.channel.send(String((['Command List', '\n', 'Commands created in 7/30/2021', '\n', 'hi', '\n', 'Help, OBR!', '\n', (s4dmessage.member || await s4dmessage.guild.members.fetch(s4dmessage.author.id)).nickname, '\n', 'pi', '\n', 'I\'m not racist but', '\n', 'color', '\n', 'among us', '\n', 'OBR'].join(''))));
+      s4dmessage.channel.send(String((['Command List', '\n', 'Commands created in 7/31/2021', '\n', 'sus', '\n', 'What\'s the Time?', '\n', 'Version'].join(''))));
+      s4dmessage.channel.send(String((['Command List', '\n', 'Command created in 8/28/2021', '\n', 'SimCity'].join(''))));
+      s4dmessage.channel.send(String('To Send Suggestions, Just Say "OBR Suggestion" at the beginning then say what you suggest.'));
+    }
 
-     s4d.reply = null; }).catch(async (e) => { console.error(e);   s4dmessage.channel.send(String('https://www.youtube.com/watch?v=_51_YJQpeg0'));
-     });}
-  if ((s4dmessage.content) == 'Help, OBR!') {
-    s4dmessage.channel.send(String((['Command List','\n','Commands created in 7/30/2021','\n','hi','\n','Help, OBR!','\n',(s4dmessage.member || await s4dmessage.guild.members.fetch(s4dmessage.author.id)).nickname,'\n','pi','\n','I\'m not racist but','\n','color','\n','among us','\n','OBR'].join(''))));
-    s4dmessage.channel.send(String((['Command List','\n','Commands created in 7/31/2021','\n','sus','\n','What\'s the Time?','\n','Version'].join(''))));
-    s4dmessage.channel.send(String((['Command List','\n','Command created in 8/28/2021','\n','SimCity'].join(''))));
-    s4dmessage.channel.send(String('To Send Suggestions, Just Say "OBR Suggestion" at the beginning then say what you suggest.'));
-  }
-
-});
+  });
 
 
-                return s4d;
-                })();
-            
+  return s4d;
+})();
