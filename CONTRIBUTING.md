@@ -1,6 +1,5 @@
 [![Build](https://github.com/Jrgamer4u/OBR/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Jrgamer4u/OBR/actions/workflows/codeql-analysis.yml)
 [![Chat](https://img.shields.io/discord/870522416600846376)](https://discord.gg/QceWFg63wQ)
-![Dependencies](https://img.shields.io/librariesio/github/Jrgamer4u/OBR)
 ![Size](https://img.shields.io/github/repo-size/Jrgamer4u/OBR)
 ![Downloads](https://img.shields.io/github/downloads/Jrgamer4u/OBR/total)
 ![License](https://img.shields.io/github/license/Jrgamer4u/OBR)
