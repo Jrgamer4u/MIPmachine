@@ -1,17 +1,6 @@
 const express = require('express');
 const server = express();
 
-var bodyParser = require('body-parser')
-
-server.use(bodyParser.urlencoded({
-  extended: true
-}))
-server.use(bodyParser.json())
-server.use(function (err, req, res, next) {
-  console.error(err.stack)
-  res.status(500).send('Something broke!')
-})
-
 server.all('/', (req, res)=>{
   res.send('Your bot is alive!')
 })
@@ -21,6 +10,6 @@ function keepAlive(){
 server.get('/', function (req, res, next) {
   Promise.resolve().then(function () {
     throw new Error('BROKEN')
-  }).catch(next) // Errors will be passed to Express.
+  }).catch(next)
 })
 module.exports = keepAlive;
