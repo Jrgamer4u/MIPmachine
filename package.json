@@ -1,7 +1,7 @@
 {
   "name": "Outlier Boa Reaper + SpyEye",
   "version": "1.2.1",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
     "start": "node ."
   },
