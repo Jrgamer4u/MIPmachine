@@ -134,7 +134,7 @@
         console.error(e); s4dmessage.channel.send(String('https://www.youtube.com/watch?v=_51_YJQpeg0'));
       });
     }
-    if ((s4dmessage.content) == 'Help, OBR!') {
+    if ((s4dmessage.content) == 'Obr, help!') {
       s4dmessage.channel.send(String((['Command List', '\n', 'Commands created in 7/30/2021', '\n', 'hi', '\n', 'Help, OBR!', '\n', (s4dmessage.member || await s4dmessage.guild.members.fetch(s4dmessage.author.id)).nickname, '\n', 'pi', '\n', 'I\'m not racist but', '\n', 'color', '\n', 'among us', '\n', 'OBR'].join(''))));
       s4dmessage.channel.send(String((['Command List', '\n', 'Commands created in 7/31/2021', '\n', 'Click', '\n', 'My clicks', '\n', 'Total clicks', '\n', 'sus', '\n', 'Version', '\n', 'What\'s the Time?', '\n', 'Click Soft Risk', '\n', 'Click Hard Risk'].join(''))));
       s4dmessage.channel.send(String((['Command List', '\n', 'Command created in 8/28/2021', '\n', 'SimCity'].join(''))));
