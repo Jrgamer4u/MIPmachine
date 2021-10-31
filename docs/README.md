@@ -8,5 +8,5 @@
 ![Activity](https://img.shields.io/github/commit-activity/m/Jrgamer4u/OBR)
 ![Activity](https://img.shields.io/github/release-date/Jrgamer4u/OBR)
 
-# Milkshake's Cool Bot
-Code For Milkshake's Cool Bot.
+# MipMachine EX
+Code For MipMachine EX.

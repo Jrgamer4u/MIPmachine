@@ -43,6 +43,7 @@
 
   s4d.client.on('ready', async () => {
     s4d.client.channels.cache.get(process.env['Connected']).send(String('Connected'));
+    s4d.client.user.setActivity('Obr, help!', { type: 'PLAYING' });
   });
 
   keepAlive()
@@ -89,7 +90,7 @@
     } else if ((s4dmessage.content) == '/totalclicks') {
       s4dmessage.channel.send(String((String(s4d.database.get(String('Total Clicks'))) + ' Clicks')));
     } else if ((s4dmessage.content) == 'Version') {
-      s4dmessage.channel.send(String('Version 1 + SpyEye'));
+      s4dmessage.channel.send(String('MipMachine EX 1 | Base: OBR 1.3 + SpyEye'));
     } else if ((s4dmessage.content) == '/time') {
       s4dmessage.channel.send(String(([(new Date().getDay()), ' / ', (new Date().getDate()), ' / ', (new Date().getHours()), ' / ', (new Date().getMinutes()), ' / ', (new Date().getSeconds())].join(''))));
     } else if ((s4dmessage.content) == '/clicksoftrisk') {
