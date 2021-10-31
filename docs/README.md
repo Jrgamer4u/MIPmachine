@@ -8,5 +8,5 @@
 ![Activity](https://img.shields.io/github/commit-activity/m/Jrgamer4u/OBR)
 ![Activity](https://img.shields.io/github/release-date/Jrgamer4u/OBR)
 
-# Outlier Boa Reaper
-Code For Outlier Boa Reaper.
+# Milkshake's Cool Bot
+Code For Milkshake's Cool Bot.
