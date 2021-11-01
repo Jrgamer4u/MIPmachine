@@ -7,9 +7,15 @@ server.all('/', (req, res)=>{
 function keepAlive(){
   server.listen(3000, ()=>{console.log("Server is Ready!")});
 }
-server.get('/', function (req, res, next) {
-  Promise.resolve().then(function () {
-    throw new Error('BROKEN')
-  }).catch(next)
-})
+
+function resolved(result) {
+  console.log('Resolved');
+}
+
+function rejected(result) {
+  console.error(result);
+}
+
+Promise.reject(new Error('fail')).then(resolved, rejected);
+
 module.exports = keepAlive;
