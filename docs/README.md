@@ -6,7 +6,7 @@
 ![Version](https://img.shields.io/github/package-json/v/Jrgamer4u/OBR)
 ![Monitoring](https://img.shields.io/uptimerobot/status/m788836527-a20f9d44af9fa0fc71b0ef0b)
 ![Activity](https://img.shields.io/github/commit-activity/m/Jrgamer4u/OBR)
-![Activity](https://img.shields.io/github/release-date/Jrgamer4u/OBR)
+![Activity](https://img.shields.io/github/release-date/Jrgamer4u/OB)
 
 # MipMachine EX
 Code For MipMachine EX.
