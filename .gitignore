@@ -1,5 +1,6 @@
 .github/
 docs/
+.replit
 db.json
 LICENSE
 CODE_OF_CONDUCT.md
