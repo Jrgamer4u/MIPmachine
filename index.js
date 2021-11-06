@@ -37,8 +37,7 @@
   });
 
   s4d.client.on('ready', async () => {
-    s4d.client.channels.cache.get(process.env['connected']).send(String('Connected'))
-    s4d.client.user.setActivity('Click Commands', { type: 'PLAYING' });
+  s4d.client.user.setActivity('Click Commands', { type: 'PLAYING' });
   });
 
   keepAlive()
@@ -52,7 +51,7 @@
       s4dmessage.channel.send(String((String(s4d.database.get(String('Total Clicks'))) + ' Clicks')));
 
     } else if ((s4dmessage.content) == 'version') {
-      s4dmessage.channel.send(String('Click Game 1.0.0 | Base: OBR 1.3.0'));
+      s4dmessage.channel.send(String('Click Game 1.0.2 | Base: OBR 1.3.0'));
 
     } else if ((s4dmessage.content) == 'Click Commands') {
         s4dmessage.channel.send(String((['Command List', '\n', 'click', '\n', 'totalclicks'].join(''))));
