@@ -10,6 +10,6 @@ module.exports = {
 		.setName('color')
 		.setDescription('gives random color number'),
 	async execute(interaction) {
-		return interaction.reply(String((String(colourRandom()))));
+		return interaction.reply(colourRandom());
 	},
 };

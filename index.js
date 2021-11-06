@@ -13,7 +13,7 @@ for (const file of commandFiles) {
 
 client.on('ready', async () => {
     client.channels.cache.get(process.env.connected).send(String('Connected'));
-    client.user.setActivity('Obr, help!', { type: 'PLAYING' });
+    client.user.setActivity('Slash Commands!', { type: 'PLAYING' });
   });
 
   keepAlive()

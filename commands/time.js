@@ -1,10 +1,17 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+var currentdate = new Date(); 
+var datetime = "Date Time: " + currentdate.getDate() + "/"
+    + (currentdate.getMonth()+1)  + "/" 
+    + currentdate.getFullYear() + " @ "  
+    + currentdate.getHours() + ":"  
+    + currentdate.getMinutes() + ":" 
+    + currentdate.getSeconds();
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('time')
 		.setDescription('shows the time'),
 	async execute(interaction) {
-		return interaction.reply(String(([(new Date().getDay()), ' / ', (new Date().getDate()), ' / ', (new Date().getHours()), ' / ', (new Date().getMinutes()), ' / ', (new Date().getSeconds())].join(''))));
+		return interaction.reply(datetime);
 	},
 };
