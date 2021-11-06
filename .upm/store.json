@@ -1,1 +1,1 @@
-{"version":2,"languages":{"nodejs-npm":{"specfileHash":"8428c6c1cdd5ee3d467a8916d52bf47d","lockfileHash":"2060b76a736acc3fc42d15bea8fa7fa6","guessedImports":["express","discord.js","easy-json-database"],"guessedImportsHash":"cfb7c698ee988cf1c990e6510dca973b"}}}
+{"version":2,"languages":{"nodejs-npm":{"specfileHash":"ae83aae746833a25e60e292bc387cabc","lockfileHash":"3c72e1801a9c7d6bdb69ce4bccb99bdc","guessedImports":["express","discord.js","easy-json-database"],"guessedImportsHash":"cfb7c698ee988cf1c990e6510dca973b"}}}
