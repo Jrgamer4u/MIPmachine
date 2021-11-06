@@ -37,57 +37,27 @@
   });
 
   s4d.client.on('ready', async () => {
-    s4d.client.user.setActivity('Obr, help!', { type: 'PLAYING' });
+    s4d.client.channels.cache.get(process.env['connected']).send(String('Connected'))
+    s4d.client.user.setActivity('Click Commands', { type: 'PLAYING' });
   });
 
   keepAlive()
 
   s4d.client.on('message', async (s4dmessage) => {
     if ((s4dmessage.content) == 'click') {
-      s4d.database.set(String((String(s4dmessage.member) + ' Clicks')), 0)
-      s4d.database.set(String((String('Total Clicks') + ' Clicks')), 0)
-      s4d.database.set(String((String(s4dmessage.member) + ' Clicks')), (s4d.database.get(String((String(s4dmessage.member) + ' Clicks'))) + 1));
-      s4d.database.set(String('Total Clicks'), (s4d.database.get(String('Total Clicks')) + 0.5));
-      s4dmessage.channel.send(String('You gained 1 click.'));
-
-    } else if ((s4dmessage.content) == 'myclicks') {
-      s4dmessage.channel.send(String((String(s4d.database.get(String((String(s4dmessage.member) + ' Clicks')))) + ' Clicks')));
+      s4d.database.set(String('Total Clicks'), (s4d.database.get(String('Total Clicks')) + 1));
+      s4dmessage.channel.send(String('We gained 1 click.'));
 
     } else if ((s4dmessage.content) == 'totalclicks') {
       s4dmessage.channel.send(String((String(s4d.database.get(String('Total Clicks'))) + ' Clicks')));
 
-    } else if ((s4dmessage.content) == ('version') {
+    } else if ((s4dmessage.content) == 'version') {
       s4dmessage.channel.send(String('Click Game 1.0.0 | Base: OBR 1.3.0'));
-    
-    } else if ((s4dmessage.content) == '/clicksoftrisk') {
-      s4d.database.set(String((String(s4dmessage.member) + ' Clicks')), 0)
-      s4d.database.set(String('Total Clicks'), 0)
-      s4d.database.set(String((String(s4dmessage.member) + ' Soft Risk')), (mathRandomInt(-10, 10)));
-      while (!((s4d.database.get(String((String(s4dmessage.member) + ' Clicks'))) + s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk')))) > 0)) {
-        s4d.database.set(String((String(s4dmessage.member) + ' Soft Risk')), (mathRandomInt(-10, 10)));
-        s4dmessage.channel.send(String('Rolling again...'));
-      }
-      s4d.database.set(String((String(s4dmessage.member) + ' Clicks')), (s4d.database.get(String((String(s4dmessage.member) + ' Clicks'))) + s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk')))));
-      s4d.database.set(String('Total Clicks'), (s4d.database.get(String('Total Clicks')) + s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk')))));
-      s4dmessage.channel.send(String((String(s4d.database.get(String((String(s4dmessage.member) + ' Soft Risk')))) + ' Clicks')));
 
-    } else if ((s4dmessage.content) == '/clickhardrisk') {
-      s4d.database.set(String((String(s4dmessage.member) + ' Clicks')), 0)
-      s4d.database.set(String('Total Clicks'), 0)
-      s4d.database.set(String((String(s4dmessage.member) + ' Hard Risk')), (mathRandomInt(-100, 100)));
-      while (!((s4d.database.get(String((String(s4dmessage.member) + ' Clicks'))) + s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk')))) > 0)) {
-        s4d.database.set(String((String(s4dmessage.member) + ' Hard Risk')), (mathRandomInt(-100, 100)));
-        s4dmessage.channel.send(String('Rolling again...'));
-      }
-      s4d.database.set(String((String(s4dmessage.member) + ' Clicks')), (s4d.database.get(String((String(s4dmessage.member) + ' Clicks'))) + s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk')))));
-      s4d.database.set(String('Total Clicks'), (s4d.database.get(String('Total Clicks')) + s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk')))));
-      s4dmessage.channel.send(String((String(s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk')))) + ' Clicks')));
-
-      if ((s4dmessage.content) == 'Click Commands') {
-        s4dmessage.channel.send(String((['Command List', '\n', 'click', '\n', 'myclicks', '\n', 'totalclicks', '\n', 'clicksoftrisk', '\n', 'clickhardrisk'].join(''))));
+    } else if ((s4dmessage.content) == 'Click Commands') {
+        s4dmessage.channel.send(String((['Command List', '\n', 'click', '\n', 'totalclicks'].join(''))));
       }
 
-    }
   });
 
 
