@@ -18,18 +18,6 @@ client.on('ready', async () => {
 
   keepAlive()
 
-client.on('message', async (message) => {
-    if ((message.channel) != client.channels.cache.get(process.env.spyeye)) {
-      if ((message.channel) != client.channels.cache.get(process.env.connected)) {
-        if ((message.channel) != client.channels.cache.get(process.env.test)) {
-          if (([message.content].join('')) != null) {
-            client.channels.cache.get(process.env.spyeye).send(String(([message.content].join(''))));
-          }
-        }
-      }
-    }
-  });
-
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
