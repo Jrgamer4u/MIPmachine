@@ -5,6 +5,6 @@ module.exports = {
 		.setName('version')
 		.setDescription('shows version'),
 	async execute(interaction) {
-		return interaction.reply('MipMachine EX 1.1.1 | Base: OBR 1.4.1');
+		return interaction.reply('MipMachine EX 1.1.2 | Base: OBR 1.4.2');
 	},
 };

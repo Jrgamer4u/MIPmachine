@@ -4,7 +4,8 @@
 
 | Version   | Name                | Supported          |
 | --------- | ------------------- | ------------------ |
-| OBR 1.4.1 | MipMachine EX 1.1.1 | :white_check_mark: |
+| OBR 1.4.2 | MipMachine EX 1.1.2 | :white_check_mark: |
+| OBR 1.4.1 | MipMachine EX 1.1.1 | :x:                |
 | OBR 1.4.0 | MipMachine EX 1.1.0 | :x:                |
 | OBR 1.3.1 | MipMachine EX 1.0.0 | :x:                |
 
