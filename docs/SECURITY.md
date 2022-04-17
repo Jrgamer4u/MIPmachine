@@ -4,7 +4,8 @@
 
 | Version          | Supported          |
 | ---------------- | ------------------ |
-| Click Game 1.0.0 | :white_check_mark: |
+| Click Game 1.0.1 | :white_check_mark: |
+| Click Game 1.0.0 | :x:                |
 
 ## Reporting a Vulnerability
 
