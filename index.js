@@ -90,7 +90,7 @@
     } else if ((s4dmessage.content) == '/totalclicks') {
       s4dmessage.channel.send(String((String(s4d.database.get(String('Total Clicks'))) + ' Clicks')));
     } else if ((s4dmessage.content) == '/version') {
-      s4dmessage.channel.send(String('MipMachine EX 1.0.0 | Base: OBR 1.3.0 + SpyEye'));
+      s4dmessage.channel.send(String('OBR 1.3.1 + SpyEye'));
     } else if ((s4dmessage.content) == '/time') {
       s4dmessage.channel.send(String(([(new Date().getDay()), ' / ', (new Date().getDate()), ' / ', (new Date().getHours()), ' / ', (new Date().getMinutes()), ' / ', (new Date().getSeconds())].join(''))));
     } else if ((s4dmessage.content) == '/clicksoftrisk') {
