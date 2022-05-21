@@ -21,23 +21,13 @@
     partials: ["REACTION"]
   });
 
-  function mathRandomInt(a, b) {
-    if (a > b) {
-      // Swap a and b to ensure a is smaller.
-      var c = a;
-      a = b;
-      b = c;
-    }
-    return Math.floor(Math.random() * (b - a + 1) + a);
-  }
-
   s4d.client.login(process.env['TOKEN']).catch((e) => {
     s4d.tokenInvalid = true; s4d.tokenError = e;
 
   });
 
   s4d.client.on('ready', async () => {
-  s4d.client.user.setActivity('Click Commands', { type: 'PLAYING' });
+  s4d.client.user.setActivity('use Click Commands for the command list', { type: 'PLAYING' });
   });
 
   keepAlive()
