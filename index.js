@@ -27,7 +27,7 @@
   });
 
   s4d.client.on('ready', async () => {
-  s4d.client.user.setActivity('use Click Commands for the command list', { type: 'PLAYING' });
+    s4d.client.user.setActivity('Type Click Commands', { type: 'PLAYING' });
   });
 
   keepAlive()
@@ -44,8 +44,8 @@
       s4dmessage.channel.send(String('Click Game 1.0.1'));
 
     } else if ((s4dmessage.content) == 'Click Commands') {
-        s4dmessage.channel.send(String((['Command List', '\n', 'click', '\n', 'totalclicks'].join(''))));
-      }
+      s4dmessage.channel.send(String((['Command List', '\n', 'click', '\n', 'totalclicks'].join(''))));
+    }
 
   });
 
