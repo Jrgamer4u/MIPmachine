@@ -3,7 +3,6 @@
   const Discord = require("discord.js");
   const Database = require("easy-json-database");
   const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
-  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const s4d = {
     Discord,
     database: new Database(`${devMode ? S4D_NATIVE_GET_PATH : "."}/db.json`),
@@ -27,6 +26,7 @@
   });
 
   s4d.client.on('ready', async () => {
+    s4d.channels.cache.get(process.env['CONNECTED']).send(String('Connected'));
     s4d.client.user.setActivity('Type Click Commands', { type: 'PLAYING' });
   });
 
@@ -41,7 +41,7 @@
       s4dmessage.channel.send(String((String(s4d.database.get(String('Total Clicks'))) + ' Clicks')));
 
     } else if ((s4dmessage.content) == 'version') {
-      s4dmessage.channel.send(String('Click Game 1.0.1'));
+      s4dmessage.channel.send(String('Click Game 1.0.2'));
 
     } else if ((s4dmessage.content) == 'Click Commands') {
       s4dmessage.channel.send(String((['Command List', '\n', 'click', '\n', 'totalclicks'].join(''))));
