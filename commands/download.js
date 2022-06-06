@@ -1,10 +1,12 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { MessageAttachment } = require('discord.js');
+const file = new MessageAttachment('images/balls.png');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('download')
-		.setDescription('shows funny image, credit to Ibby ig'),
+		.setDescription('shows funny image'),
 	async execute(interaction) {
-		return interaction.reply('https://media.discordapp.net/attachments/870522417079017474/983089550387716146/unknown.png');
+		return interaction.reply({files: [file]});
 	},
 };
