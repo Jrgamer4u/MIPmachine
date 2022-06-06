@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageAttachment } = require('discord.js');
-const file = new MessageAttachment('images/balls.jpeg');
+const file = new MessageAttachment('images/BALLZ.png');
 
 module.exports = {
 	data: new SlashCommandBuilder()
