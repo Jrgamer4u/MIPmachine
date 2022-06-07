@@ -6,11 +6,11 @@ const clicks = new Database(`${devMode ? S4D_NATIVE_GET_PATH : "."}/database/cli
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('my-clicks')
-		.setDescription('show number of clicks'),
+		.setDescription('show number of your clicks doesn’t work'),
 	async execute(interaction) {
-		if (clicks.has(interaction.user.id)) {
-			clicks.set(interaction.user.id, 0);
-		}
-		return interaction.reply(clicks.get(interaction.user.id) + ' Clicks.');
+		if (clicks.has(String((interaction.user.id)))) {
+      clicks.set(String((interaction.user.id)), 0);
+    }
+    return interaction.reply(String((String(clicks.get(String((interaction.user.id)))) + ' Clicks.')));
 	},
 };

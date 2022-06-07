@@ -8,16 +8,16 @@ module.exports = {
 		.setName('click')
 		.setDescription('click'),
 	async execute(interaction) {
-		if (clicks.has('clicks')) {
-			clicks.set('clicks', 1);
-		} else {
-			clicks.add('clicks', parseInt(1));
-		}
-		if (clicks.has(interaction.user.id)) {
-			clicks.set(interaction.user.id, 1);
-		} else {
-			clicks.add(interaction.user.id, parseInt(1));
-		}
+		if (clicks.has(String('clicks'))) {
+      clicks.set(String('clicks'), 1);
+    } else {
+      clicks.add(String('clicks'), parseInt(1));
+    }
+    if (clicks.has(String((interaction.user.id)))) {
+      clicks.set(String((interaction.user.id)), 1);
+    } else {
+      clicks.add(String((interaction.user.id)), parseInt(1));
+    }
 		return interaction.reply("1 Click added.");
 	},
 };

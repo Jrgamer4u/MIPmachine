@@ -14,6 +14,6 @@ module.exports = {
 		.setName('simple-english')
 		.setDescription('says a sentence in simple english'),
 	async execute(interaction) {
-		return interaction.reply([n.get(mathRandomInt(1, 600)), ' ', v.get(mathRandomInt(1, 17)), ' ', d.get(mathRandomInt(1, 17)), ' ', n.get(mathRandomInt(1, 600))].join(''));
+		return interaction.reply(String(([n.get(String((mathRandomInt(1, 600)))), ' ', v.get(String((mathRandomInt(1, 17)))), ' ', d.get(String((mathRandomInt(1, 17)))), ' ', n.get(String((mathRandomInt(1, 600))))].join(''))));
 	},
 };
