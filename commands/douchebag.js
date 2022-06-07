@@ -7,6 +7,6 @@ module.exports = {
 		.setName('douchebag')
 		.setDescription('shows you’re a douchebag'),
 	async execute(interaction) {
-		return interaction.reply({files: [file]});
+		return interaction.reply({ files: [file] });
 	},
 };

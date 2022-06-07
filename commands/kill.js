@@ -5,10 +5,10 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('kill')
 		.setDescription('kills a person')
-	  .addStringOption(option =>
-		  option.setName('input')
-			  .setDescription('Enter the person who gets killed')
-			  .setRequired(true)),
+		.addStringOption(option =>
+			option.setName('input')
+				.setDescription('Enter the person who gets killed')
+				.setRequired(true)),
 	async execute(interaction) {
 		const embed = new MessageEmbed()
 			.setColor('#f04747')

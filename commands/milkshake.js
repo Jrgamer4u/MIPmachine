@@ -7,7 +7,7 @@ module.exports = {
 		.setDescription('test command'),
 	async execute(interaction) {
 		await interaction.reply('MIP');
-    await wait(4000);
-    await interaction.editReply('Shmoo');
+		await wait(4000);
+		await interaction.editReply('Shmoo');
 	},
 };

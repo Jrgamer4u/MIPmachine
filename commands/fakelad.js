@@ -7,6 +7,6 @@ module.exports = {
 		.setName('fakelad')
 		.setDescription('shows fakelad image'),
 	async execute(interaction) {
-		return interaction.reply({files: [file]});
+		return interaction.reply({ files: [file] });
 	},
 };

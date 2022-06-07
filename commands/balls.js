@@ -7,6 +7,6 @@ module.exports = {
 		.setName('balls')
 		.setDescription('balls balls balls'),
 	async execute(interaction) {
-		return interaction.reply({files: [file]});
+		return interaction.reply({ files: [file] });
 	},
 };

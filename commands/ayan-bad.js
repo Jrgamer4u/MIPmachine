@@ -7,6 +7,6 @@ module.exports = {
 		.setName('ayan-bad')
 		.setDescription('says funny ayan image, credit to Ibby'),
 	async execute(interaction) {
-		return interaction.reply({files: [file]});
+		return interaction.reply({ files: [file] });
 	},
 };

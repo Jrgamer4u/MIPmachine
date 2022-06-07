@@ -7,6 +7,6 @@ module.exports = {
 		.setName('download')
 		.setDescription('shows funny image'),
 	async execute(interaction) {
-		return interaction.reply({files: [file]});
+		return interaction.reply({ files: [file] });
 	},
 };
