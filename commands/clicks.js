@@ -5,19 +5,12 @@ const clicks = new Database(`${devMode ? S4D_NATIVE_GET_PATH : "."}/database/cli
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('click')
-		.setDescription('click'),
+		.setName('my-clicks')
+		.setDescription('show number of clicks'),
 	async execute(interaction) {
 		if (clicks.has('clicks')) {
-			clicks.set('clicks', 1);
-		} else {
-			clicks.add('clicks', parseInt(1));
+			clicks.set('clicks', 0);
 		}
-		if (clicks.has(interaction.user.id)) {
-			clicks.set(interaction.user.id, 1);
-		} else {
-			clicks.add(interaction.user.id, parseInt(1));
-		}
-		return interaction.reply("1 Click added.");
+		return interaction.reply(clicks.get('clicks') + ' Clicks.');
 	},
 };
