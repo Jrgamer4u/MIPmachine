@@ -12,7 +12,7 @@ for (const file of commandFiles) {
 }
 
 client.on('ready', async () => {
-	client.channels.cache.get(process.env.connected).send(String('Connected'));
+	client.channels.cache.get(process.env.connected).send('Connected');
 	client.user.setActivity('MipMachine EX | Slash Commands!', { type: 'PLAYING' });
 });
 
