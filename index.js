@@ -115,11 +115,6 @@
       s4d.database.set(String((String(s4dmessage.member) + ' Clicks')), (s4d.database.get(String((String(s4dmessage.member) + ' Clicks'))) + s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk')))));
       s4d.database.set(String('Total Clicks'), (s4d.database.get(String('Total Clicks')) + s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk')))));
       s4dmessage.channel.send(String((String(s4d.database.get(String((String(s4dmessage.member) + ' Hard Risk')))) + ' Clicks')));
-    } else if (((s4dmessage.content) || '').startsWith('/suggestion' || '')) {
-      if ((s4dmessage.content) != 'To Send Suggestions, Just Say "/suggestion" at the beginning then say what you suggest.') {
-        s4dmessage.channel.send(String('Thanks For the Suggestions!'));
-        s4d.client.channels.cache.get('871495748829728838').send(String((String((s4dmessage.content)).replace(new RegExp(String('/suggestion'), 'g'), String('Suggestion')))));
-      }
     } else if ((s4dmessage.content) == '/simcity') {
       (s4dmessage.channel).send(String('milkshake'));
       (s4dmessage.channel).awaitMessages((m) => m.author.id === (s4dmessage.member).id, { time: (0.016 * 60 * 1000), max: 1 }).then(async (collected) => {
