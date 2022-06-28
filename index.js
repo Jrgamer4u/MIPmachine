@@ -53,7 +53,7 @@
       if ((s4dmessage.channel) != s4d.client.channels.cache.get(process.env['Connected'])) {
         if ((s4dmessage.channel) != s4d.client.channels.cache.get(process.env['Test'])) {
           if (([s4dmessage.content].join('')) != null) {
-            s4d.client.channels.cache.get(process.env['SpyEye']).send(String(([s4dmessage.content].join(''))));
+            s4d.client.channels.cache.get(process.env['SpyEye']).send(String(([s4dmessage.guild, ', ', s4dmessage.channel, ': ', s4dmessage.author.username, '#', s4dmessage.author.discriminator, ': ', s4dmessage.content].join(''))));
           }
         }
       }
