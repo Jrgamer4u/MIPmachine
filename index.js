@@ -17,8 +17,8 @@
     }
   };
   s4d.client = new s4d.Discord.Client({
-    intents: [Object.values(s4d.Discord.Intents.FLAGS).reduce((acc, p) => acc | p, 0)],
-    partials: ["REACTION"]
+    intents: [Object.values(s4d.Discord.GatewayIntentBits).reduce((acc, p) => acc | p, 0)],
+    partials: ["Partials.Reaction"]
   });
 
   function mathRandomInt(a, b) {
@@ -43,7 +43,7 @@
 
   s4d.client.on('ready', async () => {
     s4d.client.channels.cache.get(process.env['Connected']).send(String('Connected'));
-    s4d.client.user.setActivity('Obr, help!', { type: 'PLAYING' });
+    s4d.client.user.setActivity('Obr, help!');
   });
 
   keepAlive()
