@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require('discord.js');
 var currentdate = new Date();
 var datetime = "Date Time: " + currentdate.getDate() + "/"
 	+ (currentdate.getMonth() + 1) + "/"

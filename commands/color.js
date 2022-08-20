@@ -1,8 +1,8 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require('discord.js');
 
 function colourRandom() {
 	var num = Math.floor(Math.random() * Math.pow(2, 24));
-	return '#' + ('00000' + num.toString(16)).substr(-6);
+	return '#' + ('00000' + num.toString(16)).slice(-6);
 }
 
 module.exports = {

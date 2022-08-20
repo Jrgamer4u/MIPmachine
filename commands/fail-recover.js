@@ -1,5 +1,4 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -10,7 +9,7 @@ module.exports = {
 				.setDescription('Enter the person who fails to be recovered')
 				.setRequired(true)),
 	async execute(interaction) {
-		const embed = new MessageEmbed()
+		const embed = new EmbedBuilder()
 			.setColor('#ec4145')
 			.setTitle('Recovering Failed:')
 			.setDescription(interaction.options.getString('input'));

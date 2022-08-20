@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require('discord.js');
 const Database = require("easy-json-database")
 const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
 const n = new Database(`${devMode ? S4D_NATIVE_GET_PATH : "."}/database/n.json`)
