@@ -3,11 +3,9 @@
   const Discord = require("discord.js");
   const Database = require("easy-json-database");
   const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
-  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const s4d = {
     Discord,
     database: new Database(`${devMode ? S4D_NATIVE_GET_PATH : "."}/db.json`),
-    joiningMember: null,
     reply: null,
     tokenInvalid: false,
     tokenError: null,
