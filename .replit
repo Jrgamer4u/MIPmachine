@@ -1,6 +1,7 @@
 language = "nix"
 #run = "node deploy-commands.js"
 run = "node index.js"
+hidden = [".github", ".gitignore", "docs", "*.md", "LICENSE"]
 
 [nix]
 channel = "stable-22_05"
