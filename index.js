@@ -5,7 +5,7 @@
   const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
   const s4d = {
     Discord,
-    database: new Database(`${devMode ? S4D_NATIVE_GET_PATH : "."}/db.json`),
+    database: new Database(`${devMode ? S4D_NATIVE_GET_PATH : "."}/database/db.json`),
     reply: null,
     tokenInvalid: false,
     tokenError: null,
