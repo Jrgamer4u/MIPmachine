@@ -2,13 +2,14 @@
 
 ## Supported Versions (MIP)
 
-| Version   | Name                | Supported          |
-| --------- | ------------------- | ------------------ |
-| OBR 1.4.3 | MipMachine EX 1.1.3 | :white_check_mark: |
-| OBR 1.4.2 | MipMachine EX 1.1.2 | :x:                |
-| OBR 1.4.1 | MipMachine EX 1.1.1 | :x:                |
-| OBR 1.4.0 | MipMachine EX 1.1.0 | :x:                |
-| OBR 1.3.1 | MipMachine EX 1.0.0 | :x:                |
+| Version | Name | Supported |
+| - | - | - |
+| MipMachine EX 1.2.0 \| OBR 1.5.0 | October Update 2022 | :white_check_mark: |
+| MipMachine EX 1.1.3 (OBR 1.4.3) || :x: |
+| MipMachine EX 1.1.2 \| Base: OBR 1.4.2 || :x: |
+| MipMachine EX 1.1.1 \| Base: OBR 1.4.1 || :x: |
+| MipMachine EX 1.1.0 \| Base: OBR 1.4.0 || :x: |
+| MipMachine EX 1.0.0 \| Base: OBR 1.3.1 + SpyEye || :x: |
 
 ## Supported Versions (CC)
 
