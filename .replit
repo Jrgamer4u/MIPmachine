@@ -1,5 +1,4 @@
 language = "nix"
-#run = "node deploy-commands.js"
 run = "node index.js"
 hidden = [".github", ".gitignore", "docs", "*.md", "LICENSE"]
 
