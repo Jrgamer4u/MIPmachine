@@ -37,7 +37,7 @@
 | OBR 1.1.1 | :x: |
 | OBR 1.1 | :x: |
 | OBR 1.0.1 | :x: |
-| OBR 1      | :x: |
+| OBR 1 | :x: |
 
 ## Reporting a Vulnerability
 
