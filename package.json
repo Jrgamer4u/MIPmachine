@@ -1,6 +1,6 @@
 {
 	"name": "mipmachine-ex",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"main": "index.js",
 	"dependencies": {
 		"discord.js": "^14.6.0",
