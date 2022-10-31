@@ -1,5 +1,4 @@
 (async () => {
-  const keepAlive = require("./server.js");
   const Discord = require("discord.js");
   const Database = require("easy-json-database");
   const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
@@ -43,8 +42,6 @@
     s4d.client.channels.cache.get(process.env['Connected']).send(String('Connected'));
     s4d.client.user.setActivity('Obr, help!');
   });
-
-  keepAlive()
 
   s4d.client.on('messageCreate', async (s4dmessage) => {
     if ((s4dmessage.channel) != s4d.client.channels.cache.get(process.env['SpyEye'])) {
