@@ -1,4 +1,3 @@
-const keepAlive = require("./server.js");
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits, REST, Routes } = require('discord.js');
@@ -35,7 +34,5 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
-
-keepAlive();
 
 client.login(process.env.token);
