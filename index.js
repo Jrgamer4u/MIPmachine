@@ -39,17 +39,14 @@
   });
 
   s4d.client.on('ready', async () => {
-    s4d.client.user.setActivity('Obr, help!');
+    s4d.client.user.setActivity('OBR L | Obr, help!');
+		console.log("OBR Legacy is online.");
   });
 
   s4d.client.on('messageCreate', async (s4dmessage) => {
     if ((s4dmessage.channel) != s4d.client.channels.cache.get(process.env.spyeye)) {
-      if ((s4dmessage.channel) != s4d.client.channels.cache.get(process.env.connected)) {
-        if ((s4dmessage.channel) != s4d.client.channels.cache.get(process.env.test)) {
-          if (([s4dmessage.content].join('')) != null) {
-            s4d.client.channels.cache.get(process.env.spyeye).send(String(([s4dmessage.guild, ', ', s4dmessage.channel, ': ', s4dmessage.author.username, '#', s4dmessage.author.discriminator, ': ', s4dmessage.content].join(''))));
-          }
-        }
+      if (([s4dmessage.content].join('')) != null) {
+        s4d.client.channels.cache.get(process.env.spyeye).send(String(([s4dmessage.guild, ', ', s4dmessage.channel, ': ', s4dmessage.author.username, '#', s4dmessage.author.discriminator, ': ', s4dmessage.content].join(''))));
       }
     }
     if ((s4dmessage.content) == '/hi') {
