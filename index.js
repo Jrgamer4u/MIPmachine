@@ -39,7 +39,6 @@
   });
 
   s4d.client.on('ready', async () => {
-    s4d.client.channels.cache.get(process.env.connected).send(String('Connected'));
     s4d.client.user.setActivity('Obr, help!');
   });
 
