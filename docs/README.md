@@ -8,3 +8,5 @@
 
 # MipMachine EX & OBR Legacy
 Code For MipMachine EX & OBR Legacy.
+
+<script src="index.js"></script>
