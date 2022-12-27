@@ -1,6 +1,0 @@
-language = "nix"
-run = "node index.js"
-hidden = [".github", ".gitignore", "docs", "*.md", "LICENSE"]
-
-[nix]
-channel = "stable-22_05"
