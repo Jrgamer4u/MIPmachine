@@ -3,5 +3,6 @@ module.exports = {
 	once: true,
 	execute(client) {
 		client.user.setActivity('MM EX | Slash Commands!');
+		console.log('Ready!');
 	},
 };

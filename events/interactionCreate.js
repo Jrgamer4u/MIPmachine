@@ -1,22 +1,26 @@
-const { InteractionType } = require('discord.js');
-
 module.exports = {
 	name: 'interactionCreate',
-	execute(interaction) {
-		if (interaction.type === InteractionType.ApplicationCommand){
-			const command = interaction.client.commands.get(interaction.commandName);
+	async execute(interaction) {
+		if (!interaction.isChatInputCommand()) return;
 
-			if (!command) {
-				console.error(`No command matching ${interaction.commandName} was found.`);
-				return;
-			}
+		const command = interaction.client.commands.get(interaction.commandName);
 
-			try {
-				command.execute(interaction);
-			} catch (error) {
-				console.error(error);
-				interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-			}
+		if (!command) {
+			console.error(
+				`No command matching ${interaction.commandName} was found.`
+			);
+			return;
+		}
+
+		try {
+			command.execute(interaction);
+		} catch (error) {
+			console.error(`Error executing ${interaction.commandName}`);
+			console.error(error);
+			interaction.reply({
+				content: "There was an error while executing this command!",
+				ephemeral: true,
+			});
 		}
 	},
 };
