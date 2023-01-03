@@ -1,10 +1,10 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder } = require("discord.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('cringe')
-		.setDescription('says Cringe, credit to Ibby'),
+		.setName("cringe")
+		.setDescription("says Cringe, credit to Ibby"),
 	async execute(interaction) {
-		return interaction.reply('Cringe');
+		return interaction.reply("Cringe");
 	},
 };

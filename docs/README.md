@@ -7,4 +7,5 @@
 ![Activity](https://img.shields.io/github/release-date/Jrgamer4u/MipMachine-EX)
 
 # MipMachine EX
+
 Code For MipMachine EX.
