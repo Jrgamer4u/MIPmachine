@@ -5,9 +5,7 @@ module.exports = {
 		.setName("kil")
 		.setDescription("kil person")
 		.addStringOption((option) =>
-			option.setName("input")
-				.setDescription("Nter who di")
-				.setRequired(true)
+			option.setName("input").setDescription("Nter who di").setRequired(true)
 		),
 	async execute(interaction) {
 		return interaction.reply(
