@@ -2,9 +2,6 @@
 	"name": "mipmachine-ex",
 	"version": "1.2.1",
 	"main": "index.js",
-	"engines": {
-		"node": "^16.14.2"
-	},
 	"scripts": {
 		"start": "node index.js"
 	},
