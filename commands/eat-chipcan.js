@@ -6,6 +6,6 @@ module.exports = {
 		.setName('eat-chipcan')
 		.setDescription('’s ass'),
 	async execute(interaction) {
-		return interaction.reply({ content: "<:love:858854429143072798><:love:858854429143072798><:love:858854429143072798>", files: [file] });
+		return interaction.reply({ files: [file] });
 	},
 };

@@ -6,6 +6,6 @@ module.exports = {
 		.setName('download')
 		.setDescription('now'),
 	async execute(interaction) {
-		return interaction.reply({ content: "now. <:shot:858854281292283914>", files: [file] });
+		return interaction.reply({ content: "now.", files: [file] });
 	},
 };

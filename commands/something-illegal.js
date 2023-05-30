@@ -8,6 +8,6 @@ module.exports = {
 	async execute(interaction) {
 		await interaction.reply('alright then.\nim gonna do something illegal to you.');
 		await wait(2000);
-		await interaction.followUp('254.421.81.132 <:love:858854429143072798>');
+		await interaction.followUp('254.421.81.132');
 	},
 };

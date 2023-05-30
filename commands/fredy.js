@@ -6,6 +6,6 @@ module.exports = {
 		.setName('fredy')
 		.setDescription('real'),
 	async execute(interaction) {
-		return interaction.reply({ content: "fredy -u-", files: [file] });
+		return interaction.reply({ content: "fredy", files: [file] });
 	},
 };

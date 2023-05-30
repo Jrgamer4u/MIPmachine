@@ -5,6 +5,6 @@ module.exports = {
 		.setName('current-kill-count')
 		.setDescription('tells you'),
 	async execute(interaction) {
-		return interaction.reply("more than you :sunglasses: <:lol:857776541727588362>");
+		return interaction.reply("more than you :sunglasses:");
 	},
 };

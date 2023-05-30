@@ -1,7 +1,4 @@
 const { InteractionType } = require('discord.js');
-const Database = require("easy-json-database");
-const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
-const db = new Database(`${devMode ? S4D_NATIVE_GET_PATH : "."}/database/db.json`);
 
 module.exports = {
 	name: 'interactionCreate',
@@ -23,12 +20,6 @@ module.exports = {
 			if (interaction.customId === 'select') {
 				interaction.update({ content: interaction.values[0], components: [] });
 			}
-		}
-
-		if (interaction.type === InteractionType.ModalSubmit){
-			const input = interaction.fields.getTextInputValue('Input');
-			const type = interaction.customId;
-			db.set(input, type);
 		}
 	},
 };

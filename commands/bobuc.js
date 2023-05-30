@@ -11,7 +11,7 @@ module.exports = {
 	async execute(interaction) {
 		const embed = new EmbedBuilder()
 			.setColor('#33ccff')
-			.setTitle('<:yah:857776457987915786>  Bobux Recieved:')
+			.setTitle('Bobux Recieved:')
 			.setDescription(interaction.options.getString('input'));
 		return interaction.reply({ embeds: [embed] });
 	},
