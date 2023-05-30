@@ -2,6 +2,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits, REST, Routes } = require('discord.js');
 
+require("dotenv").config();
+
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 const commands = [];
@@ -16,9 +18,9 @@ for (const file of commandFiles) {
 	client.commands.set(command.data.name, command);
 }
 
-const rest = new REST({ version: '10' }).setToken(process.env.token);
+const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
-rest.put(Routes.applicationCommands(process.env.clientId), { body: commands })
+rest.put(Routes.applicationCommands(process.env.CLIENTID), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
 	.catch(console.error);
 
@@ -35,4 +37,4 @@ for (const file of eventFiles) {
 	}
 }
 
-client.login(process.env.token);
+client.login(process.env.TOKEN);
