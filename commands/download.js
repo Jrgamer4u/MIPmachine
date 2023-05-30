@@ -1,11 +1,11 @@
-const { SlashCommandBuilder, AttachmentBuilder } = require("discord.js");
-const file = new AttachmentBuilder("images/DOWNLOAD.png");
+const { SlashCommandBuilder, AttachmentBuilder } = require('discord.js');
+const file = new AttachmentBuilder('files/DOWNLOAD.png');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName("download")
-		.setDescription("shows funny image"),
+		.setName('download')
+		.setDescription('now'),
 	async execute(interaction) {
-		return interaction.reply({ files: [file] });
+		return interaction.reply({ content: "now. <:shot:858854281292283914>", files: [file] });
 	},
 };

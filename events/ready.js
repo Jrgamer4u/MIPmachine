@@ -1,8 +1,7 @@
 module.exports = {
-	name: "ready",
+	name: 'ready',
 	once: true,
 	execute(client) {
-		client.user.setActivity("MM EX | Slash Commands!");
-		console.log("Ready!");
+		client.user.setActivity('/BB | Slash Commands!');
 	},
 };
